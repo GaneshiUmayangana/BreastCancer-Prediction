@@ -1,0 +1,68 @@
+<!-- results.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='cancer5.jpg') }}" alt="Logo" class="logo">
+        </div>
+        <div class="title-container">
+            <h1 class="title">Breast Cancer Diagnosis</h1>
+        </div>
+
+        <style>
+            .main-content {
+            padding-bottom: 50px; /* Adjust the padding-bottom value as needed */
+         }
+        </style>
+
+    </header>
+
+    <main class="main-content">
+        <img src="{{ url_for('static', filename='cancer2.jpg') }}" alt="Cancer Image" style="width: 300px; display: block; margin: 0 auto;"><br><br>
+
+        <div class="container">
+            <div class="result-header">
+                <h1><strong>Result:</strong></h1>
+            </div>
+            <div class="result-text">
+                <p>The patient has a <strong>{{cancer_result}}</strong> tumor.</p><br><br>
+            </div>
+            
+        </div>
+        <div class="msg">
+            <p><strong>{{ message }}</strong></p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 CureMinds. All rights reserved.</p>
+    </footer>
+
+
+
+  <!--  <div class="container">
+        <img src="{{ url_for('static', filename='cancer2.jpg') }}" alt="Cancer Logo" class="logo">
+        <div class="content">
+            <h1 class="title">Prediction Results</h1>
+            <p class="result">
+                <span class="bold">Results:</span><br>
+                The patient has a <span class="bold">malignant</span> tumor.
+            </p>
+        </div>
+    </div>
+
+    <br><br><img src="{{ url_for('static', filename='cancer4.jpg') }}" alt="Cancer Image" style="width: 250px;"><br><br>
+-->
+</body>
+</html>
+
